@@ -1,8 +1,11 @@
 const defaultResult = 0;
 let currentResult = defaultResult;
 
-defaultResult = (currentResult + 10) * 3;
+currentResult = (currentResult + 10) * 3 / 2 - 1;
 
-let calculationDescription = '(' + currentResult + ' + 10) * 3 / 2 - 1';
+// The backticks are referred to as "template literal" which allows us to include dynamic values
+let calculationDescription = `(${defaultResult} + 10)* 3 / 2 - 1`;
+let errorMessage = "An error '" +
+                   "occurred!";
 
 outputResult(currentResult, calculationDescription);
